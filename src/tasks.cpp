@@ -12,10 +12,10 @@ using std::copy;
 
 // Задание 1
 void swap_args(int *lhs, int *rhs) {
+    if(lhs== nullptr||rhs== nullptr) return;
     int temp = *lhs;
     *lhs = *rhs;
     *rhs = temp;
-
 }
 
 // Задание 2
@@ -79,7 +79,7 @@ int *find_max_element(int *arr, int size) {
 vector<int> find_odd_numbers(vector<int> &arr) {
     vector<int> result;
     for(int x:arr){
-        if (x%2==1) result.push_back(x);
+        if (abs(x%2)==1) result.push_back(x);
     }
     return result;
 }
@@ -93,4 +93,5 @@ vector<int> find_common_elements(vector<int> &arr_a, vector<int> &arr_b) {
             if (i==j) result.push_back(i);
         }
     }
+    return result;
 }
