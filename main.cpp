@@ -5,6 +5,8 @@
 using namespace std;
 
 int main() {
-    // можете написать сюда свой код для отладки программы и дополнительного тестирования функций
-    return 0;
+    vector<int> a = {1,2,4,5};
+    vector<int> b = {2,6,7,2,9,1};
+    vector<int> res = find_common_elements(a,b);
+    for(int x:res) cout<<x<<" ";
 }
